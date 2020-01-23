@@ -21,6 +21,10 @@ public class Server {
 
             return new JSONObject().put("count", String.valueOf(getTotalCount())).toString();
         });
+
+        get("/", (request, response) -> {
+            return "Welcome!";
+        });
     }
 
     private static boolean processMessage(String payload) {
