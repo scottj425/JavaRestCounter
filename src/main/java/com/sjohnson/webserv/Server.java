@@ -12,6 +12,7 @@ public class Server {
     public static HashMap<String, Integer> received = new HashMap<>();
 
     public static void listen() {
+
         post("/message", (request, response) -> {
 
             if (!processMessage(request.body())) {
